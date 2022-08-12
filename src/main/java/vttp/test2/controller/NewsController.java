@@ -22,7 +22,7 @@ public class NewsController {
     @Autowired
     NewsService NewsService;
 
-    @GetMapping
+    @GetMapping ("/text")
     public String showIndexPage(Model model) {
         NewsArticle n = new NewsArticle();
         model.addAttribute("NewsArticle", n);

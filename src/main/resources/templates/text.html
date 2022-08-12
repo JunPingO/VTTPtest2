@@ -6,26 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto News of the Day</title>
 </head>
-    <h1> test</h1>
-    
-    <form method="GET">
     <div class="container d-flex justify-content-center">
-        <div class="card">
-          <div class="card-body">
-            <div class="card-title">
-              <div class="row">
-              </div>
-            </div>
+      <div class="row mt-5">
+          <div class="row">
+          <form method = "GET" action = "text">
             <p data-th-text="${NewsArticle.id}"></p>
             <p data-th-text="${NewsArticle.title}"></p>
             <img src="https://images.cryptocompare.com/news/default/bitcoincom.png" alt="image">
-            
-            <div class="justify-content-center">
-              <button type="reset" class="btn btn-warning btn-lg">
-                Save
-            </button>
-              <br />
-            </div>
+            <button type="submit" class="btn btn-warning btn-lg">
+              Save
+          </button>
+            <br />
           </div>
         </div>
       </div>

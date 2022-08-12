@@ -73,7 +73,7 @@ public class NewsArticle {
     }
 
     public static NewsArticle createJson(String json) throws IOException {
-        logger.info("NewsArticle createJson");
+        logger.info("NewsArticle createJson method");
         NewsArticle n = new NewsArticle();
 
         try (InputStream is = new ByteArrayInputStream(json.getBytes())) {
@@ -88,7 +88,7 @@ public class NewsArticle {
             n.url = mainObj.getJsonString("url").toString();
             n.body = mainObj.getJsonString("body").toString();
             n.categories = mainObj.getJsonString("categories").toString();
-            logger.info(">>>>> > " + n.toString());
+            logger.info(">>>>>> " + n.toString());
         }
         return n;
     }
