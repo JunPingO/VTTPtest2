@@ -81,13 +81,14 @@ public class NewsArticle {
             JsonObject object = reader.readObject();
             logger.info(object.toString());
             JsonObject mainObj = object.getJsonObject("Data");
-            n.id = mainObj.getJsonString("id").toString();
-            n.published_on = mainObj.getJsonString("published_on").toString();
+            n.id = mainObj.getJsonNumber("id").toString();
+            n.published_on = mainObj.getJsonNumber("published_on").toString();
             n.imageurl = mainObj.getJsonString("imageurl").toString();
             n.title = mainObj.getJsonString("title").toString();
             n.url = mainObj.getJsonString("url").toString();
             n.body = mainObj.getJsonString("body").toString();
             n.categories = mainObj.getJsonString("categories").toString();
+            logger.info(">>>>> > " + n.toString());
         }
         return n;
     }
