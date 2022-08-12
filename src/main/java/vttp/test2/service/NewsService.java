@@ -18,8 +18,7 @@ public class NewsService {
     private static String cryptoNewsURL = "https://min-api.cryptocompare.com/data/v2/news/?lang=EN";
 
     public Optional<NewsArticle> getArticles(NewsArticle c) {
-        // String apiKey = System.getenv("API_KEY");
-        String apiKey = "18275781e9a5f2e934f76002ae4b4150f0c76fff27568c9b93d7ee5e40cb126f";
+        String apiKey = System.getenv("API_KEY");
         
         String newsUrl = UriComponentsBuilder.fromUriString(cryptoNewsURL)
                             .queryParam("Apikey", apiKey)
