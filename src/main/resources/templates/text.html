@@ -12,7 +12,7 @@
           <form method = "GET" action = "text">
             <p data-th-text="${NewsArticle.id}"></p>
             <p data-th-text="${NewsArticle.title}"></p>
-            <img src="https://images.cryptocompare.com/news/default/bitcoincom.png" alt="image">
+            <img src="${NewsArticle.imageurl}" alt="image">
             <button type="submit" class="btn btn-warning btn-lg">
               Save
           </button>
